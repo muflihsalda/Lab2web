@@ -68,7 +68,8 @@ Edit style_eksternal.css:
 
 📸 Screenshot hasil ID & Class Selector
 
-<img width="1365" height="537" alt="praktikum2 web 4" src="https://github.com/user-attachments/assets/630b386a-f7a6-4298-98ef-6e667669e835" />
+<img width="1360" height="555" alt="image" src="https://github.com/user-attachments/assets/a7978fe4-ca5c-42c7-a749-43a2bf8b82cb" />
+
 
  
  Kesimpulan
