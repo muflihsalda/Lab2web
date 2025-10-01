@@ -1,4 +1,8 @@
 # Lab2web
+<p>Nama : Muflih Salda Maulana</p>
+<P>Nim  : 312410527</P>
+<p>Kelas: TI.24.A5 </p>
+
 1. Membuat Dokumen HTML
 
 Buat file baru lab2_css_dasar.html dengan struktur dasar HTML.
@@ -15,25 +19,26 @@ Buat file baru lab2_css_dasar.html dengan struktur dasar HTML.
 
 Tambahkan CSS pada bagian <head>:
 
+<img width="1005" height="436" alt="coding praktikum2  2" src="https://github.com/user-attachments/assets/93e19f3f-624c-43c0-ba8f-539b9a5f216b" />
 
 
 📸 Screenshot setelah menggunakan Internal CSS
 
+<img width="1365" height="582" alt="praktikum2 web 2" src="https://github.com/user-attachments/assets/ec2f32b8-ef98-4740-a4ce-00dd0754fba2" />
 
 
 3. Menambahkan Inline CSS
 
 Tambahkan pada elemen <p>:
 
-<p style="text-align: center; color: #ccd8e4;">
-    Ini adalah contoh paragraf dengan Inline CSS
-</p>
+<img width="683" height="371" alt="image" src="https://github.com/user-attachments/assets/176475ba-46c6-471c-a5bf-bea45915aca3" />
+
 
 
 📸 Screenshot hasil Inline CSS
 
+<img width="681" height="478" alt="image" src="https://github.com/user-attachments/assets/ff18cc93-61cc-4bb0-a6ef-25fcfcbd1fd7" />
 
-<img width="1365" height="582" alt="praktikum2 web 2" src="https://github.com/user-attachments/assets/7e10b57f-2284-4041-8ca8-cfc23274fde9" />
 
 
 4. Membuat Eksternal CSS
@@ -51,63 +56,22 @@ Tambahkan pada file HTML:
 
 📸 Screenshot hasil setelah menggunakan eksternal CSS
 
-<img width="1365" height="537" alt="praktikum2 web 4" src="https://github.com/user-attachments/assets/1b8c85a1-54b4-4412-9cce-3200c6bab44a" />
+<img width="672" height="561" alt="praktikum2 web 3" src="https://github.com/user-attachments/assets/fda6af13-2eff-408f-9df4-98e3e64f78f4" />
 
 
 5. Menambahkan CSS Selector
 
 Edit style_eksternal.css:
 
-/* ID Selector */
-#intro {
-    background: #418fb1;
-    border: 1px solid #099249;
-    min-height: 100px;
-    padding: 10px;
-}
-#intro h1 {
-    text-align: left;
-    border: 0;
-    color: #fff;
-}
-
-/* Class Selector */
-.button {
-    padding: 15px 20px;
-    background: #bebcbd;
-    color: #fff;
-    display: inline-block;
-    margin: 10px;
-    text-decoration: none;
-}
-.btn-primary {
-    background: #E42A42;
-}
+<img width="414" height="329" alt="menambahkan id selector 4" src="https://github.com/user-attachments/assets/0f0cd778-e2b0-4f2c-b08c-9f3ce6e4c86e" />
 
 
 📸 Screenshot hasil ID & Class Selector
 
-❓ Pertanyaan
+<img width="1365" height="537" alt="praktikum2 web 4" src="https://github.com/user-attachments/assets/630b386a-f7a6-4298-98ef-6e667669e835" />
 
-Apa perbedaan h1 {..} dengan #intro h1 {..}?
-
-h1 {..} → berlaku untuk semua elemen <h1>.
-
-#intro h1 {..} → hanya berlaku untuk <h1> yang ada di dalam elemen dengan id="intro".
-
-Jika ada internal, eksternal, dan inline CSS pada elemen yang sama, mana yang ditampilkan?
-
-Browser akan mengutamakan Inline CSS → Internal CSS → Eksternal CSS (berdasarkan urutan prioritas CSS).
-
-Jika satu elemen memiliki ID dan Class, deklarasi mana yang ditampilkan?
-
-ID Selector lebih spesifik dibanding Class, sehingga ID lebih diutamakan.
-
-Contoh:
-
-<p id="paragraf-1" class="text-paragraf">Contoh teks</p>
-
-📌 Kesimpulan
+ 
+ Kesimpulan
 
 CSS memiliki tiga cara penulisan: inline, internal, eksternal.
 
