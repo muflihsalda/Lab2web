@@ -56,7 +56,9 @@ Tambahkan pada file HTML:
 
 📸 Screenshot hasil setelah menggunakan eksternal CSS
 
-<img width="672" height="561" alt="praktikum2 web 3" src="https://github.com/user-attachments/assets/fda6af13-2eff-408f-9df4-98e3e64f78f4" />
+<img width="1365" height="552" alt="image" src="https://github.com/user-attachments/assets/3446e3bc-dfa7-4180-b52d-b04e0296a0fa" />
+
+
 
 
 5. Menambahkan CSS Selector
