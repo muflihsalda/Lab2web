@@ -105,20 +105,21 @@ h1 {
 Hasil eksperimen dengan menambahkan properti:
 
 ```css
-h1 {
-    color: blue;                  /* Warna teks */
+ h1 {
+    color: rgb(209, 34, 11);                  /* Warna teks */
     font-size: 32px;              /* Ukuran huruf */
     text-align: center;           /* Rata tengah */
-    background-color: #f0f0f0;    /* Latar belakang */
-    padding: 10px;                /* Jarak dalam */
-    border-radius: 8px;           /* Sudut melengkung */
-    box-shadow: 2px 2px 5px gray; /* Bayangan */
+    background-color: #fa8d08;    /* Latar belakang */
+    padding: 15px;                /* Jarak dalam */
+    border-radius: 50px;           /* Sudut melengkung */
+    box-shadow: 10px 10px 30px rgb(22, 7, 7); /* Bayangan */
 }
 ```
 
-Teks `<h1>` tampil lebih menarik dengan ukuran besar, background abu, dan efek bayangan.
+Teks `<h1>` tampil lebih menarik dengan ukuran besar, background oren, dan efek bayangan.
 
----
+<img width="1360" height="555" alt="image" src="https://github.com/user-attachments/assets/057c5b3d-c95c-4a31-8976-7bb3d190da7b" />
+
 
 ## **2. Perbedaan `h1 {...}` dengan `#intro h1 {...}`**
 
@@ -139,13 +140,14 @@ h1 {
     color: blue;   /* Semua h1 biru */
 }
 #intro h1 {
-    color: red;    /* Tapi h1 di dalam #intro jadi merah */
+    color: yellow;    /* Tapi h1 di dalam #intro jadi kuning */
 }
 ```
 
-Hasil: judul biasa = biru, judul dalam intro = merah.
+Hasil: judul biasa = biru, judul dalam intro = kuning.
 
----
+<img width="673" height="102" alt="image" src="https://github.com/user-attachments/assets/1010c8c5-12bf-41aa-b344-8e51a47dc33b" />
+
 
 ## **3. Prioritas CSS (Inline, Internal, Eksternal)**
 
@@ -157,65 +159,102 @@ Urutan prioritas CSS jika konflik:
 
 **Contoh:**
 
-```html
 <head>
-    <link rel="stylesheet" href="style.css"> <!-- Eksternal -->
+    <!-- CSS Eksternal -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS Internal -->
     <style>
-        p { color: green; } /* Internal */
+        p {
+            text-align: justify;
+            color: red;
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
-    <p style="color: red;">Teks Contoh</p> <!-- Inline -->
+    <header>
+        <h1>CSS Internal dan <i> inline CSS</i></h1>
+    </header>
+    <nav>
+        <a href="lab2_css_dasar.html">CSS Dasar</a>
+        <a href="lab2_css_eksternal.html">CSS Eksternal</a>
+        <a href="lab1_tag_dasar.html">HTML Dasar</a>
+    </nav>
+
+    <!-- Inline CSS -->
+    <p style="text-align: center; color: #ccd8e4;">
+        Ini adalah teks tambahan dengan style inline
+    </p>
 </body>
-```
 
-Jika di **style.css** ada:
 
-```css
-p { color: blue; }
-```
+Misalkan di style.css (eksternal) ada aturan:
 
-Hasil di browser: **Teks berwarna merah** karena inline lebih kuat.
+p {
+  color: blue;
+  text-align: left
+
+**Hasil yang muncul di browser:**
+
+Eksternal (style.css) → p { color: blue; text-align: left; }
+
+Internal (style di <head>) → p { color: red; text-align: justify; }
+
+Inline (style langsung di tag <p>) → style="text-align: center; color: #ccd8e4;"
+
+**Karena inline CSS lebih spesifik, maka yang ditampilkan adalah:**
+
+text-align: center; (inline menang melawan justify dan left)
+
+color: #ccd8e4; (inline menang melawan red dan blue)
+
+font-size: 18px; (hanya ada di internal, jadi tetap berlaku)
+## **4. ID vs Class (Spesifisitas CSS)**
+
+### Urutan kekuatan CSS (specificity):
+
+1. **Inline CSS** → paling kuat
+2. **ID Selector** (`#id`)
+3. **Class Selector** (`.class`)
+4. **Tag Selector** (`p, h1, div`)
 
 ---
 
-## **4. ID vs Class (Spesifisitas CSS)**
-
-* **ID (`#id`)** lebih kuat dari **Class (`.class`)**.
-* Jika keduanya dipakai pada elemen yang sama, maka **ID menang** jika ada konflik.
-
-**Contoh:**
+### Contoh:
 
 ```html
-<p id="paragraf-1" class="text-paragraf">Ini contoh paragraf</p>
+<p id="paragraf-1" class="text-paragraf" style="color: green;">
+    Ini adalah paragraf percobaan
+</p>
 ```
 
+CSS:
+
 ```css
+/* Class */
 .text-paragraf {
     color: blue;
 }
+
+/* ID */
 #paragraf-1 {
     color: red;
 }
 ```
 
-Hasil: teks **berwarna merah** karena ID lebih kuat.
+Hasil yang muncul di browser: **warna hijau**
 
-Jika propertinya berbeda, maka keduanya akan digabung:
+* Karena **inline style** (style="color: green;") mengalahkan ID dan class.
 
-```css
-.text-paragraf {
-    font-size: 18px;
-}
-#paragraf-1 {
-    color: red;
-}
-```
+Kalau **tanpa inline style**:
 
-Hasil: teks **merah** dan **ukuran 18px**.
+* Warna **merah** (karena ID `#paragraf-1` lebih kuat daripada class `.text-paragraf`).
+
+**Inline > ID > Class > Tag**
+* Jadi yang dipakai tergantung siapa yang lebih kuat.
 
 
- 
  Kesimpulan
 
 CSS memiliki tiga cara penulisan: inline, internal, eksternal.
